@@ -1,0 +1,6 @@
+flexATX
+16
+4
+microATX
+8
+2

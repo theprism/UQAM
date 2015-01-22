@@ -1,0 +1,135 @@
+**INF-1120**
+*Semaine 2*
+
+But du cours : Apprendre a donner des ordres simples à un ordinateur à l'aide du language Java.
+
+Le but des sturctures de contrôle est de manipuler le flux d'exécution du programe.
+
+*Tant que faire*
+
+DEBUT
+	AFFICHER "Veuillez saisir un entier strictement positif"
+	LIRE n
+	TANT QUE n =< 0 FAIRE
+		AFFICHER "Erreur"
+		AFFICHER "Veuillez saisir un entier strictement positif"
+		LIRE n
+	FIN TANT QUE
+	AFFICHER "Correct"
+FIN
+
+^^^^ Boucle de validation afin de vérifier la saisie de l'utilisateur
+
+TANT QUE <condition> FAIRE
+	<instructions>
+FIN TANT QUE
+
+Faire la trace
+
+DEBUT
+	AFFICHER "Saisir entier positif"
+	LIRE n
+	x <- 1
+	TANT QUE n =< 0 FAIRE
+		AFFICHER "Erreur"
+		AFFICHER "Veuillez saisir"
+		LIRE n
+		x <- x + 1
+	FIN TANT QUE
+	AFFICHER "Correct"
+FIN
+
+Saisir
+-2 etr
+x = 1
+Erreur
+Saisir
+-1 etr
+x = 2
+Erreur
+Saisir
+3
+x = 3
+Correct
+
+A quoi sert le programe : Il sert a valider la saisie d'un utilisateur en vérifiant qu'il saisit un entier strictement positif.
+
+X sert a compter le nombre de tentatives effectuées par l'utilisateur.
+
+x = 0
+x correspond a la somme des valeurs saisies par l'utilisateur
+
+*Autre exemple*
+DEBUT
+	AFFICHER "Saisir un entier:"
+	LIRE entierSaisi
+
+	somme <- 0
+	entierCalcule <- entierSaisi
+
+	TANT QUE entierCalcule > 0 FAIRE
+		somme <- somme + entierCalcule
+		entierCalcule <- entierCalcule -1
+	FIN TANT QUE
+
+	AFFICHER "La somme est: ", somme
+FIN
+
+Le programe calcule la somme des valeurs entre 1 et l'entier saisi
+--------------------
+*Boucle faire tant que*
+FAIRE
+	<une ou plusieurs instructions>
+TANTQUE <condition>
+
+*Exemple : Boucle de validation*
+FAIRE
+	AFFICHER "Veuillez saisir un mois"
+	SAISIR mois
+	SI mois < 1 OU mois > 12 ALORS
+		AFFICHER "Erreur mois non valide"
+	FINSI
+TANTQUE mois < 1 OU mois > 12
+
+AFFICHER "Fin de l'algorithme"
+--------------------
+DEBUT
+	AFFICHER "Veuillez saisir un mois"
+	SAISIR mois
+	TANTQUE ( mois < 1 OU mois > 12 ) FAIRE
+		AFFICHER "Erreur : mois non valide"
+		AFFICHER "Veuillez saisir un mois"
+		SAISIR mois
+	FIN TANTQUE
+	AFFICHER "Fin de l'algorithme"
+FIN
+--------------------
+**Java**
+--------------------
+public class PremierProgrammeJava {
+    /**
+    *Programme principal
+    */
+    public static void main (String[] args) {
+        // Déclaration d'une variable
+        String prenom;
+
+        // Affichage d'un texte
+        System.out.print("Veuillez saisir votre prenom: ");
+        // Saisir une valeur à traver le clavier
+        prenom = Clavier.lireString();
+
+        System.out.print("Merci ");
+
+        // Affichage de la valeur d'une variable
+        System.out.println(prenom);
+
+        System.out.println("Fin du programme.");
+    }
+}
+
+*Note*
+Le java est très strict sur les caractères et la syntaxe, minuscule, majuscules ; etc.
+
+Compilateur, prend le .java, fichier source et le converti un exécutable java .class
+

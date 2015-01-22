@@ -1,0 +1,62 @@
+**Atelier 3**
+    *Exercice 1*
+Sachant:
+    1 heure = 60 minutes
+    1 minute = 60 secondes
+    1 heure = 60 x 60 = 3600 secondes
+
+On divise 6527 par 3600, on obtiens le nombre d'heures
+    (6527 / 3600 = 1 heure)
+On calcule le nombre de secondes restantes de la division
+    (6527 - (3600 x 1)) = 2927
+On divise le nombre de secondes restantes par 60, on obtiens le nombre de minutes
+    ((6527 - (3600 x 1)) / 60) = 48 minutes
+On calcule le nombre de secondes restantes de la division
+    (2927 - 60 x 48) = 47 secondes
+    
+    *Pseudo-Code*
+nbHeures <- 6527/3600
+nbSecondesRestantes <- (6527 - (3600 x nbHeures)) ou (6527 - 6527 MOD 3600)
+nbMinutes <- nbSecondesRestantes / 60
+nbSecondes <- nbSecondesRestantes MOD 60
+
+    *Exercice 2*
+nbJours <- nbSecondes / (24 * 60 * 60)
+nbSecondesRestantes <- nbSecondes MOD (24 * 60 * 60)
+nbHeures <- nbSecondesRestantes / 3600
+nbSecondesRestantes <- nbSecondesRestantes MOD 3600
+nbMinutes <- nbSecondesRestantes / 60
+nbSecondes <- nbSecondesRestantes MOD 60
+AFFICHER nbJours, nbHeures, nbMinutes, nbSecondes
+
+**Demander à l'utilisateur le nombre de secondes**
+
+TANT QUE (le nombre est différent de 0)
+    SI les nombre est strictement négatif {
+        AFFICHER msg Erreur
+    SINON // nombre strictement positif 
+            BLOC 1
+    FINSI
+    Demander à l'utilisateur le nombre de seconde
+FINTANTQUE
+
+*Pseudo-Code*
+DEBUT
+    AFFICHER "Veuillez saisir un entier etant le nombre de secondes"
+	SAISIR nbSecondes
+	TANT QUE (nbSecondes =/= 0) FAIRE
+	    SI (nbSecondes < 0 ) ALORS
+		    AFFICHER "Erreur: le nombre doit être positif"
+		SINON // le nombre est strictement positif
+		    nbJours <- nbSecondes / (24 * 60 * 60)
+            nbSecondesRestantes <- nbSecondes MOD (24 * 60 * 60)
+            nbHeures <- nbSecondesRestantes / 3600
+            nbSecondesRestantes <- nbSecondesRestantes MOD 3600
+            nbMinutes <- nbSecondesRestantes / 60
+            nbSecondes <- nbSecondesRestantes MOD 60
+            AFFICHER nbJours, nbHeures, nbMinutes, nbSecondes
+		FINSI
+        AFFICHER "Veuillez saisir un entier etant le nombre de secondes"
+	    SAISIR nbSecondes
+	FINTANTQUE
+FIN

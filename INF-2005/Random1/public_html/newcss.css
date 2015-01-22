@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-01-08, 12:00:49
+    Author     : Thomas
+*/
+
+body{
+    background-color: grey;
+}
+
+td {
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-spacing: 1px;
+    width: 50px;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+}
+.px100{
+    width: 100px;
+    
+}
+
+    /*
+    id example 
+    call using id="" tag
+    */
+
+#pro {
+    
+}
+    /*
+    Example of a class atribute
+    Call using class="" tag
+    */
+    
+.test {
+    background: #9d0000;
+    border-color: #ffff00;
+    border-width: 1px;
+    border-style: solid;
+    border-spacing: 1px;
+    color: wheat; 
+}
+
+.test{
+    
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 0px 32px 0px #000000;
+	-webkit-box-shadow:inset 0px 0px 32px 0px #000000;
+	box-shadow:inset 0px 0px 32px 0px #000000;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.myButton:hover {
+	-moz-box-shadow:inset 0px 0px 32px 0px #FFFFFF;
+	-webkit-box-shadow:inset 0px 0px 32px 0px #FFFFFF;
+	box-shadow:inset 0px 0px 32px 0px #FFFFFF;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
